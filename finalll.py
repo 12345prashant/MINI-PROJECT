@@ -5,3 +5,5 @@ from geopy.geocoders import Nominatim      # this library is used to get current
 import random                              # this library is used to get random number
 import cProfile                            # this library is used for profiling
 loc = Nominatim(user_agent="GetLoc")
+
+global First_Name , Last_Name , location_for_appointment,Aadhar_no,first_dose_date,dob,age,vaccine
