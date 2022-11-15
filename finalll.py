@@ -318,4 +318,14 @@ def ask_vaccination():
             exit()    
 
 ask_vaccination()                                        # calling ask vaccination function
+print("\n")
+print("Your 1st Dose Vaccination is Done!!!!\n")
+global second_dose_date
+print("You can apply for Second Dose after ",second_dose_date.strftime('%d-%m-%Y'))
+print("For 1st Dose Certificate click [ y or n]\n")       # asking user whether he wants 2st dose certificate
+inp=input()
+if(inp=="y"):
+    first_dose_certificate(second_dose_date)              # calling first dose certificate
+
+
 
