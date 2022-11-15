@@ -327,5 +327,17 @@ inp=input()
 if(inp=="y"):
     first_dose_certificate(second_dose_date)              # calling first dose certificate
 
+print("Do You Want To Check Second Dose Staus:")
+second_inp=input()
+if(second_inp=="y"):
+    Verification_for_second_dose()
+
+print("Do you want to apply for Second dose [y/n]\n")     # asking whether want to apply for second dose
+s3=input()
+if(s3=="y"):
+    second_dose_message(location_for_appointment,First_Name,Last_Name,dob,age,Aadhar_no,second_dose_date,vaccine,Application_id,gender)
+else:
+    print("Stay safe...")
+    exit()
 
 
