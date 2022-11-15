@@ -11,3 +11,28 @@ Application_id=random.randint(1000,100000)
 print("Hey! Welcome To The Vaccination Drive...\n")
 print("Enter Your Phone Number To Login or Sign up")
 phone_no = int(input())                    # getting phone number input from user
+
+OTP_generate=random.randint(1000,100000)   # this will generate a random OTP
+print("Your OTP for Login in vaccination is ", OTP_generate) 
+'''
+This function is used to verify OTP entered by the user
+'''
+def Verify_OTP( otp):
+    if(otp==OTP_generate):
+        print("OTP verified!! Let's Continue ")
+    else:
+        print("INCORRECT OTP, Please click on Resend OTP To Try Again") 
+        Get_OTP()  
+       
+'''
+This function is used to take input for OTP from user
+'''
+def Get_OTP():
+    print(''' OTP Sent on The Given Phone Number
+      Verify To Continue''')
+    global otp
+    otp = int(input("Enter the OTP\n"))
+    Verify_OTP(otp)                       # calling the function to verify OTP
+
+Get_OTP()                                 # calling the function to get OTP
+
