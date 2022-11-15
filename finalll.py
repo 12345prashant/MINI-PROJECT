@@ -79,3 +79,18 @@ def second_dose_status():
     days_left = second_dose_date-presentday                 # finding days left by subtracting second dose day with present day using date time library function
     print("Total Days left for Your Second Dose are",days_left)
 
+'''
+Below Function will take appllication id input from user
+if the entered id is correct then only user can do further process
+
+'''
+def Verification_for_second_dose():
+    print("Enter the Application id provided during 1st dose")
+    apply=int(input())
+    if(apply==Application_id):                               # this condition is used to check entered number with application id
+        print("You Can Apply On or After: \n",second_dose_date.strftime('%d-%m-%Y'))
+        second_dose_status()                                # calling second dose staus function
+
+    else:
+        print("Incorrect ID\n")    
+
