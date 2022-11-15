@@ -244,4 +244,50 @@ def Set_Vaccination_Venue():
    # calling first dose message function
     first_dose_message(location_for_appointment,First_Name,Last_Name,dob,age,Aadhar_no,first_dose_date,vaccine,Application_id,gender) 
     
+    '''
+Below function will schedule appointment for first dose
+'''
+def Schedule_Appointment():
+    global Aadhar_no,first_dose_date,presentday
+    print("Enter Your Aadhar Number:\n")             # asking for user aadhar number
+    Aadhar_no=int(input())
+    presentday = datetime.now()                      # Fetching present day date and time 
+    first_dose_date=presentday + timedelta(3)        # Setting first dose date after 3 days from present day by date time library
+
+    Set_Vaccination_Venue()                          # calling set vaccination venue function
+
+'''
+Below Function will ask for vaccine name that user wants
+'''
+def get_vaccine_name():
+    global vaccine
+    print("Enter The Vaccine You Want: Covishield or Covaccine:\n")
+    vaccine=input()
+    Schedule_Appointment()                                       # calling schedule appointment function after that
+
+'''
+Below function will ask for general details for appointment 
+'''
+
+def Apply_Vaccination():
+    global First_Name ,Last_Name,dob,age,Application_id,gender
+    
+                        # this will generate random id using random library function
+    print("Enter your First Name\n")
+    First_Name=input()                                            # Asking for user name
+    print("Enter your Last Name\n")
+    Last_Name=input()
+    print("Your Gender\n")                                        # asking for gender
+    gender=input()
+    print("Enter Your Date Of Birth\n")                           # asking date of birth
+    dob=input()
+
+    print("Enter your Age\n")                                     # Asking age input
+    age=int(input())
+    
+    get_vaccine_name()                                            # Calling get vaccine name function
+    
+        
+
+
 
