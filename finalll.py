@@ -188,4 +188,37 @@ def second_dose_message(location_for_appointment,First_Name,Last_Name,dob,age,Aa
     print("Vaccine Name: "+ vaccine)
     print("\n")
     guidlines_for_vaccination()                       # Calling Guidlines for vaccination function
+    
+    '''
+Below function will generate a message confirming the appointment of user for first dose with date , time and location
+'''
+
+def first_dose_message(location_for_appointment,First_Name,Last_Name,dob,age,Aadhar_no,first_dose_date,vaccine,Application_id,gender):
+    print("\n")
+    print(''' YOUR 1st DOSE APPOINTMENT IS BOOKED \n''')
+    print("Below are the Following Detalis\n")
+    print("APPLICATION ID: ",Application_id)
+    print("\n")
+    print("NAME: "+ First_Name +" "+ Last_Name)
+    print("\n")
+    print("Gender: "+ gender)
+    print("\n")
+    print("AADHAR NUMBER: ",Aadhar_no)
+    print("\n")
+    print("DATE OF BIRTH: "+ dob)
+    print("\n")
+    print("AGE: ",age)
+    print("\n")
+    print("VACCINATION VENUE: "+ str(location_for_appointment))
+    print("\n")
+    print("Time: 11AM - 3PM")
+    print("\n")
+    print("First Dose Date: ", first_dose_date.strftime('%d-%m-%Y'))
+    print("\n")
+    print("Vaccine Name: "+ vaccine)
+    print("\n")
+    guidlines_for_vaccination()                       # Calling Guidlines for vaccination function
+    schedule_second_dose(vaccine,first_dose_date)     # calling schedule second dose function
+    
+
 
