@@ -36,3 +36,38 @@ def Get_OTP():
 
 Get_OTP()                                 # calling the function to get OTP
 
+'''
+Below function will generate your second dose certificate
+'''
+def second_dose_certificate(second_dose_date):                
+    print("\n")
+    print('''                        Certificate Of Covid - 19 Vaccination                  ''')
+    print('''                                    Second Dose                                 ''')
+    print("\n")
+    print("APPLICATION ID: ",Application_id)
+    print("\n")
+    print("NAME: "+ First_Name +" "+ Last_Name)
+    print("\n")
+    print("Gender: "+ gender)
+    print("\n")
+    print("ID VERIFIED: ",Aadhar_no)
+    print("\n")
+    print("DATE OF BIRTH: "+ dob)
+    print("\n")
+    print("AGE: ",age)
+    print("\n")
+    print("Vaccination Status : Fully Vaccinated (1st Dose)")
+    print("\n")
+    print("Vaccination Details:")
+    print("Vaccine Name: "+ vaccine)
+    print("\n")
+    print("Vaccine Type: Covid 19 vaccine, non- replacing viral vector")
+    print("\n")
+    print("Dose Number: 2")
+    print("\n")
+    print("Date Of First Dose: ",first_dose_date.strftime('%d-%m-%Y'))
+    print("\n")
+    print("Date of Second Dose: ",second_dose_date.strftime('%d-%m-%Y'))
+    print("\n")
+    print("Vaccination At : "+ str(location_for_appointment))
+
