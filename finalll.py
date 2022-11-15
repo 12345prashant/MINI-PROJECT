@@ -71,3 +71,11 @@ def second_dose_certificate(second_dose_date):
     print("\n")
     print("Vaccination At : "+ str(location_for_appointment))
 
+'''
+ Below function will count the number of days left for your second dose 
+'''    
+def second_dose_status():
+    global days_left
+    days_left = second_dose_date-presentday                 # finding days left by subtracting second dose day with present day using date time library function
+    print("Total Days left for Your Second Dose are",days_left)
+
