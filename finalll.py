@@ -290,4 +290,32 @@ def Apply_Vaccination():
         
 
 
+'''
+Below function will ask user whether he/she wants to apply for vaccination
+'''
+def ask_vaccination():
+    global Application_id
+    print("DO you want to Apply For 1st Dose Vaccination [Yes/No]")
+    s = input()
+
+    if(s=="yes"):
+        
+        Apply_Vaccination()                                      # calling Apply Vaccination function
+
+    else:
+        print("Do you want to apply for second dose [Yes/No]\n")
+        s2=input()
+        if(s2=="yes"):
+            print("Enter First Dose Application Id\n")          # asking for application ID
+            s1=int(input())
+            if(s1==Application_id):
+                Apply_Vaccination()
+            else:
+                print(" You have not applied for 1st dose , First apply for that..")
+                ask_vaccination()
+        else:
+            print("Stay Healthy, Stay Safe...\n")    
+            exit()    
+
+ask_vaccination()                                        # calling ask vaccination function
 
