@@ -147,3 +147,17 @@ def first_dose_certificate(second_dose_date):
 
 
 
+
+'''
+ Below function will show the guidlines for vaccination for user
+'''
+
+def guidlines_for_vaccination():
+    print('''                                     GUIDLINES FOR VACCINATION                  ''')
+    print('''Make sure you have:
+    
+    1. A Mask that covers your nose and mouth and fits tightly and comfortably.
+    2. Hand Sanitizer.
+    3. The Notification you received about your appointment.
+    4. Your ID''')
+
