@@ -221,4 +221,27 @@ def first_dose_message(location_for_appointment,First_Name,Last_Name,dob,age,Aad
     schedule_second_dose(vaccine,first_dose_date)     # calling schedule second dose function
     
 
+'''
+Below function will generate a new location from user's existing location 
+'''
+def Set_Vaccination_Venue():
+    global location_for_appointment
+    print("Enter Your Location\n")
+    your_location=input()                             # Taking current location as user input
+    print("Your Appointement Request is Being Processed . Please Wait..")
+    getloc = loc.geocode(your_location)
+    # generating some random loactions according to user preference
+    getloc1 = loc.geocode("Vijay nagar indore")
+    getloc2 = loc.geocode("abhay prashal indore")
+    getloc3 = loc.geocode("rajwada indore")
+    getloc4 = loc.geocode("Geeta bhawan indore")
+    getloc5 = loc.geocode("Regal square indore")
+    
+    locations=[getloc1,getloc2,getloc3,getloc4,getloc5]
+    rand_idx = random.randrange(len(locations))
+    random_num = locations[rand_idx]
+    location_for_appointment=(random_num)
+   # calling first dose message function
+    first_dose_message(location_for_appointment,First_Name,Last_Name,dob,age,Aadhar_no,first_dose_date,vaccine,Application_id,gender) 
+    
 
