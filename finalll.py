@@ -94,3 +94,13 @@ def Verification_for_second_dose():
     else:
         print("Incorrect ID\n")    
 
+'''
+Below function will schedule the second dose date 
+'''
+def schedule_second_dose(vaccine,first_dose_date):
+    global second_dose_date
+    if(vaccine=="Covishield"):                            # if covishield vaacine is entered by user than second dose will be after 90 days 
+        second_dose_date= first_dose_date +timedelta(90)  # time delta will show the date after 90 days from present day
+    elif(vaccine=="Covaccine"):                           # if covaccine vaacine is entered by user than second dose will be after 28 days
+        second_dose_date= first_dose_date +timedelta(28)  # time delta will show the date after 28 days from present day  
+
