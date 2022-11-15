@@ -340,4 +340,9 @@ else:
     print("Stay safe...")
     exit()
 
+print("To Download certifacte of your Second Dose click [y /n]\n")      # asking user whether he wants 2st dose certificate
+in2=input()
+if(in2=="y") :
+    second_dose_certificate(second_dose_date) 
+
 
