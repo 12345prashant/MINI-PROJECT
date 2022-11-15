@@ -104,3 +104,46 @@ def schedule_second_dose(vaccine,first_dose_date):
     elif(vaccine=="Covaccine"):                           # if covaccine vaacine is entered by user than second dose will be after 28 days
         second_dose_date= first_dose_date +timedelta(28)  # time delta will show the date after 28 days from present day  
 
+'''
+Below function is used to get first dose certificate of the user
+'''
+def first_dose_certificate(second_dose_date):
+    print("Enter application ID\n")                      # taking application id from user for verification
+    h1=int(input())
+    if(h1==Application_id):
+        print("\n")
+        print('''                        Certificate Of Covid - 19 Vaccination                  ''')
+        print('''                                    First Dose                                 ''')
+        print("\n")
+        print("APPLICATION ID: ",Application_id)
+        print("\n")
+        print("NAME: "+ First_Name +" "+ Last_Name)
+        print("\n")
+        print("Gender: "+ gender)
+        print("\n")
+        print("ID VERIFIED: ",Aadhar_no)
+        print("\n")
+        print("DATE OF BIRTH: "+ dob)
+        print("\n")
+        print("AGE: ",age)
+        print("\n")
+        print("Vaccination Status : Half Vaccinated (1st Dose)")
+        print("\n")
+        print("Vaccination Details:")
+        print("Vaccine Name: "+ vaccine)
+        print("\n")
+        print("Vaccine Type: Covid 19 vaccine, non- replacing viral vector")
+        print("\n")
+        print("Dose Number: 1")
+        print("\n")
+        print("Dose Date: ",first_dose_date.strftime('%d-%m-%Y'))
+        print("\n")
+        print("Apply For Second Dose After 2nd Dose Date: ",second_dose_date.strftime('%d-%m-%Y'))
+        print("\n")
+        print("Vaccination At : "+ str(location_for_appointment))
+    else:
+        print("Incorrect ID, Try Again..")
+        first_dose_certificate(second_dose_date)    
+
+
+
