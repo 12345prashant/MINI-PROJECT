@@ -7,3 +7,7 @@ import cProfile                            # this library is used for profiling
 loc = Nominatim(user_agent="GetLoc")
 
 global First_Name , Last_Name , location_for_appointment,Aadhar_no,first_dose_date,dob,age,vaccine
+Application_id=random.randint(1000,100000)
+print("Hey! Welcome To The Vaccination Drive...\n")
+print("Enter Your Phone Number To Login or Sign up")
+phone_no = int(input())                    # getting phone number input from user
